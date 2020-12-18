@@ -1,0 +1,30 @@
+# -*- mode: ruby -*-
+
+Vagrant.configure("2") do |config|
+
+  # ansible1 server
+  config.vm.define "ansible1" do |ansible1|
+    ansible1.vm.box = "centos/7"
+    ansible1.vm.network "private_network", ip: "192.168.33.10"
+    ansible1.vm.hostname = "ansible1"
+    ansible1.vm.provider "virtualbox" do |vb|
+      vb.memory = "2048"
+    end
+  end
+
+  # ansible2 server
+  config.vm.define "ansible2" do |ansible2|
+    ansible2.vm.box = "centos/7"
+    ansible2.vm.network "private_network", ip: "192.168.33.20"
+    ansible2.vm.hostname = "ansible2"
+    ansible2.vm.provider "virtualbox" do |vb|
+      vb.memory = "2048"
+    end
+  end
+
+  # general configuration
+  config.vm.provision "shell", inline: <<-SHELL
+    yum update -y
+    echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCtaHQSWR4R8clQVTtm7jmIrWiXFKucE/v+w81z+CikbXW12pp6KcOF5T7AUVTVVsdHBeRDmAgeOpYdAoMQ28jYsw1fudie1cX6DEXzD5RWNzxvUR49zwwiUCyngNqNTpVx54nkm0g7BsvKyDhyw3X/OxiP9BQ6JxJcojzx0s6CPjxMdpNQdhmZ4Wqo/B7GqpofLV5QQPXmTxx/zeQMowybbO+3/ckB+c99U/sl5QJ/0dKLaRTxOcDOCgD70O7ycA2wkMPUbraMoCrxOV4upHcE6Brb83g7Tv/n2VTf9s+/FyQzBR8ck2YIJ6iK8jQtiIX8qqfa8dMln17VHuNm5XohMrHY2pQ++RjRiYdxqtugWQ0M2l9/clIVT3KyfxDtHPEYMkTrMn+mKHffFfWd+W/fLjtrLSU5WoHGXuN02+0i1YVKD7gTkm3jCj/qlGsomDzfSBdl1sLR2HW2Cf9gTCKqycIc+vPIkwAE2mFkQRftIJo50E5DumDvfFIV7yzGZaRwuesM/PY9/3PWVFar0BWeiy/NIChxrgOEClXrHK+Vyr6jhgzvIepNaZ/oMfvTNYNd3chU9rtFCBd/6DnV60YiukvF1gLO9Lwr6N9bDifEzuxM9Jn3PsLtNr536EwJbiJbws49e5jYaLq7hkPCniWseeXMLwJpVofBBqQLpL9cbQ== fedelemantuano@daddybear" >> /home/vagrant/.ssh/authorized_keys
+  SHELL
+end

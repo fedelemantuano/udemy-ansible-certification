@@ -6,4 +6,4 @@ Saranno mostrati una serie di esercizi pratici che ripercorrono gli argomenti og
 
 # Precisazione
 
-Gli esercizi e gli esempi usati in questo corso non riflettono quelli proposti dai programmi di training forniti da Red Hat ed hanno solo scopo educativo. Inoltre non sarà fornita nessuna informazione in merito all'esame per la certificazione, in quanto il materiale qui proposto ha il solo scopo di preparare lo studente a possibili scenari di esame.
+Gli esercizi e gli esempi usati in questo corso non riflettono quelli proposti dai programmi di training forniti da Red Hat ed hanno solo scopo didattico. Inoltre non sarà fornita nessuna informazione in merito all'esame per la certificazione, in quanto il materiale qui proposto ha il solo scopo di preparare lo studente a possibili scenari di esame.

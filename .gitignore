@@ -1,0 +1,6 @@
+*.log
+*.retry
+.*.swp
+.vagrant/
+venv/
+.vscode/

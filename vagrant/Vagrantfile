@@ -1,30 +1,61 @@
 # -*- mode: ruby -*-
 
+ssh_public_key = "AAAAB3NzaC1yc2EAAAADAQABAAACAQCtaHQSWR4R8clQVTtm7jmIrWiXFKucE/v+w81z+CikbXW12pp6KcOF5T7AUVTVVsdHBeRDmAgeOpYdAoMQ28jYsw1fudie1cX6DEXzD5RWNzxvUR49zwwiUCyngNqNTpVx54nkm0g7BsvKyDhyw3X/OxiP9BQ6JxJcojzx0s6CPjxMdpNQdhmZ4Wqo/B7GqpofLV5QQPXmTxx/zeQMowybbO+3/ckB+c99U/sl5QJ/0dKLaRTxOcDOCgD70O7ycA2wkMPUbraMoCrxOV4upHcE6Brb83g7Tv/n2VTf9s+/FyQzBR8ck2YIJ6iK8jQtiIX8qqfa8dMln17VHuNm5XohMrHY2pQ++RjRiYdxqtugWQ0M2l9/clIVT3KyfxDtHPEYMkTrMn+mKHffFfWd+W/fLjtrLSU5WoHGXuN02+0i1YVKD7gTkm3jCj/qlGsomDzfSBdl1sLR2HW2Cf9gTCKqycIc+vPIkwAE2mFkQRftIJo50E5DumDvfFIV7yzGZaRwuesM/PY9/3PWVFar0BWeiy/NIChxrgOEClXrHK+Vyr6jhgzvIepNaZ/oMfvTNYNd3chU9rtFCBd/6DnV60YiukvF1gLO9Lwr6N9bDifEzuxM9Jn3PsLtNr536EwJbiJbws49e5jYaLq7hkPCniWseeXMLwJpVofBBqQLpL9cbQ== fedelemantuano@daddybear"
+
 Vagrant.configure("2") do |config|
 
-  # ansible1 server
-  config.vm.define "ansible1" do |ansible1|
-    ansible1.vm.box = "centos/7"
-    ansible1.vm.network "private_network", ip: "192.168.33.10"
-    ansible1.vm.hostname = "ansible1"
-    ansible1.vm.provider "virtualbox" do |vb|
-      vb.memory = "2048"
+  # control server
+  config.vm.define "control" do |control|
+    control.vm.box = "centos/7"
+    control.vm.network "private_network", ip: "192.168.33.100"
+    control.vm.hostname = "control"
+    control.vm.provider "virtualbox" do |vb|
+      vb.memory = "1024"
     end
   end
 
-  # ansible2 server
-  config.vm.define "ansible2" do |ansible2|
-    ansible2.vm.box = "centos/7"
-    ansible2.vm.network "private_network", ip: "192.168.33.20"
-    ansible2.vm.hostname = "ansible2"
-    ansible2.vm.provider "virtualbox" do |vb|
-      vb.memory = "2048"
+  # web1 server
+  config.vm.define "web1" do |web1|
+    web1.vm.box = "centos/7"
+    web1.vm.network "private_network", ip: "192.168.33.10"
+    web1.vm.hostname = "web1"
+    web1.vm.provider "virtualbox" do |vb|
+      vb.memory = "1024"
+    end
+  end
+
+  # web2 server
+  config.vm.define "web2" do |web2|
+    web2.vm.box = "centos/7"
+    web2.vm.network "private_network", ip: "192.168.33.20"
+    web2.vm.hostname = "web2"
+    web2.vm.provider "virtualbox" do |vb|
+      vb.memory = "1024"
+    end
+  end
+
+  # proxy server
+  config.vm.define "proxy" do |proxy|
+    proxy.vm.box = "centos/7"
+    proxy.vm.network "private_network", ip: "192.168.33.30"
+    proxy.vm.hostname = "proxy"
+    proxy.vm.provider "virtualbox" do |vb|
+      vb.memory = "1024"
+    end
+  end
+
+  # database server
+  config.vm.define "database" do |database|
+    database.vm.box = "centos/7"
+    database.vm.network "private_network", ip: "192.168.33.40"
+    database.vm.hostname = "database"
+    database.vm.provider "virtualbox" do |vb|
+      vb.memory = "1024"
     end
   end
 
   # general configuration
   config.vm.provision "shell", inline: <<-SHELL
-    yum update -y
-    echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCtaHQSWR4R8clQVTtm7jmIrWiXFKucE/v+w81z+CikbXW12pp6KcOF5T7AUVTVVsdHBeRDmAgeOpYdAoMQ28jYsw1fudie1cX6DEXzD5RWNzxvUR49zwwiUCyngNqNTpVx54nkm0g7BsvKyDhyw3X/OxiP9BQ6JxJcojzx0s6CPjxMdpNQdhmZ4Wqo/B7GqpofLV5QQPXmTxx/zeQMowybbO+3/ckB+c99U/sl5QJ/0dKLaRTxOcDOCgD70O7ycA2wkMPUbraMoCrxOV4upHcE6Brb83g7Tv/n2VTf9s+/FyQzBR8ck2YIJ6iK8jQtiIX8qqfa8dMln17VHuNm5XohMrHY2pQ++RjRiYdxqtugWQ0M2l9/clIVT3KyfxDtHPEYMkTrMn+mKHffFfWd+W/fLjtrLSU5WoHGXuN02+0i1YVKD7gTkm3jCj/qlGsomDzfSBdl1sLR2HW2Cf9gTCKqycIc+vPIkwAE2mFkQRftIJo50E5DumDvfFIV7yzGZaRwuesM/PY9/3PWVFar0BWeiy/NIChxrgOEClXrHK+Vyr6jhgzvIepNaZ/oMfvTNYNd3chU9rtFCBd/6DnV60YiukvF1gLO9Lwr6N9bDifEzuxM9Jn3PsLtNr536EwJbiJbws49e5jYaLq7hkPCniWseeXMLwJpVofBBqQLpL9cbQ== fedelemantuano@daddybear" >> /home/vagrant/.ssh/authorized_keys
+    echo "ssh-rsa #{ssh_public_key}" >> /home/vagrant/.ssh/authorized_keys
   SHELL
 end

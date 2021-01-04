@@ -1,9 +1,32 @@
 # Overview
 
-Questo corso è stato realizzato con lo scopo di aiutare alla preparazione della _[Red Hat Certified Specialist in Ansible Automation exam (EX407)](https://www.redhat.com/en/services/training/ex407-red-hat-certified-specialist-in-ansible-automation-exam)_.
+The goal of this course is to help the students for the _[Red Hat Certified Specialist in Ansible Automation exam (EX407)](https://www.redhat.com/en/services/training/ex407-red-hat-certified-specialist-in-ansible-automation-exam)_.
 
-Saranno mostrati una serie di esercizi pratici che ripercorrono gli argomenti oggetto di esame. Ogni esercizio sarà discusso e risolto, fornendo il playbook della soluzione. In questo modo ognuno potrà testare le proprie competenze.
+We will setup a test environment with [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/). This environment will simulate a  network like the following table:
 
-# Precisazione
+| Hostname | Group | IP |
+|:---------|:------|:---|
+| control.ansible.loc | control | 192.168.33.100 |
+| web1.ansible.loc | webservers | 192.168.33.10 |
+| web2.ansible.loc | webservers | 192.168.33.20 |
+| proxy.ansible.loc | proxy | 192.168.33.30 |
+| database.ansible.loc | database | 192.168.33.40 |
 
-Gli esercizi e gli esempi usati in questo corso non riflettono quelli proposti dai programmi di training forniti da Red Hat ed hanno solo scopo didattico. Inoltre non sarà fornita nessuna informazione in merito all'esame per la certificazione, in quanto il materiale qui proposto ha il solo scopo di preparare lo studente a possibili scenari di esame.
+Then we will show some commons exercises and practical examples that you can use to try your hand at to test your knowledge.
+
+
+# Important
+
+Note that the exam objectives can change at any time. It is the responsibility of the reader to always review the objectives prior to studying and taking the exam to ensure success.
+
+All practical examples used here do not reflect the training programs provided by Red Hat and are educational only.
+
+
+# Exercises
+
+ - [Exercise 1](./Exercise_1.md)
+
+
+# Solutions
+
+All solutions are in Udemy Course.

@@ -14,7 +14,7 @@
 ## Questions
 
 - Install Ansible on control node
-- Create a path on control node with all configuration and playbooks
+- Create a path on control node with all configuration and playbooks (`/home/vagrant/ansible`)
 - Copy defaut file `ansible.cfg` in local project path
 - Change path where Ansible search for roles in `roles` in local path
 - Change the default Ansible inventory in `inventory` in local path

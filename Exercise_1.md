@@ -20,5 +20,5 @@
 - Change the default Ansible inventory in `inventory` in local path
 - Disable privilege escalation by default
 - Ansible should connect to nodes using `vagrant` user
-- Create the `inventory` file as in inventorty table
+- Create the `inventory` file as in inventory table
 - Test all hosts with Ansible ping

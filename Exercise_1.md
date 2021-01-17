@@ -21,4 +21,4 @@
 - Disable privilege escalation by default
 - Ansible should connect to nodes using `vagrant` user
 - Create the `inventory` file as in inventory table
-- Test all hosts with Ansible ping
+- Test all hosts with Ansible ping module

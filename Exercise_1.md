@@ -13,13 +13,12 @@
 
 ## Questions
 
-- Install Ansible on control node (yum and pip)
-- Create a path on control node with all configuration and playbooks
+- Install Ansible on control node
+- Create a path on control node with all configuration and playbooks (`/home/vagrant/ansible`)
 - Copy defaut file `ansible.cfg` in local project path
 - Change path where Ansible search for roles in `roles` in local path
 - Change the default Ansible inventory in `inventory` in local path
 - Disable privilege escalation by default
 - Ansible should connect to nodes using `vagrant` user
-- Create SSH keys to use with Ansible. Change `ansible.cfg`
-- Add a second disk to `web1.ansible.loc`
-- Create the `inventory` file as in inventorty table
+- Create the `inventory` file as in inventory table
+- Test all hosts with Ansible ping module

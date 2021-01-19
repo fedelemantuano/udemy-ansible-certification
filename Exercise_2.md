@@ -1,4 +1,4 @@
-# EXERCISE 1
+# EXERCISE 2
 
 ## Inventory
 

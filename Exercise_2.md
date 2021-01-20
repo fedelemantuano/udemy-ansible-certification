@@ -13,7 +13,7 @@
 
 ## Questions
 
-- Use ad hoc command to get all mounts and all block devices for all hosts in invetory
+- Use ad hoc command to get all mounts and all block devices for all hosts in inventory
 - Use ad hoc command to check if `crond` service is up on `web1.ansible.loc`
 - Use ad hoc command to display `/etc/motd` for all hosts
 - Use ad hoc command to get the facts variabile name of memory free and ip address of eth1

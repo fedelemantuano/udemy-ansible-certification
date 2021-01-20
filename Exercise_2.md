@@ -19,7 +19,7 @@
 - Use ad hoc command to get the facts variabile name of memory free and ip address of `eth1`
 - Create a playbook that change the file hosts of all servers. This playbook should add a line for every host in inventory:
 
-    `192.168.33.10 web1.ansible.loc`
+    `192.168.33.10 web1.ansible.loc web1`
 
   You should get IP address and name from facts and/or special Ansible variables.
 

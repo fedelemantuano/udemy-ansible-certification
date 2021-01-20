@@ -28,6 +28,6 @@
 - Create a playbook to install `developments tools` and `system roles`
 - Create a playbook to change the content of `/etc/motd`, with the following line:
 
-    This hosts is a webserver
+    _This hosts is a webserver_
 
   The line should change foreach group in inventory: control, webserver, proxy, database

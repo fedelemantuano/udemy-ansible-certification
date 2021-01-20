@@ -16,7 +16,7 @@
 - Use ad hoc command to get all mounts and all block devices for all hosts in inventory
 - Use ad hoc command to check if `crond` service is up on `web1.ansible.loc`
 - Use ad hoc command to display `/etc/motd` for all hosts
-- Use ad hoc command to get the facts variabile name of memory free and ip address of eth1
+- Use ad hoc command to get the facts variabile name of memory free and ip address of `eth1`
 - Create a playbook that change the file hosts of all servers. This playbook should add a line for every host in inventory:
 
     `192.168.33.10 web1.ansible.loc`

@@ -30,4 +30,4 @@
 
     _This hosts is a webserver_
 
-  The line should change foreach group in inventory: control, webserver, proxy, database
+  The line should change foreach group in inventory: control, webservers, proxy, database

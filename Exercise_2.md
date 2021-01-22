@@ -25,7 +25,7 @@
 
   Use `lineinfile` module for this exercise.
 
-- Create a playbook to install `developments tools` and `system roles`
+- Create a playbook to install `developments tools` on all hosts and `system roles` only on control node
 - Create a playbook to change the content of `/etc/motd`, with the following line:
 
     _This hosts is a webserver_

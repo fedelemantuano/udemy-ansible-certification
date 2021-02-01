@@ -26,6 +26,9 @@ All practical examples used here do not reflect the training programs provided b
 
  - [Exercise 1](./Exercise_1.md)
  - [Exercise 2](./Exercise_2.md)
+ - [Exercise 3](./Exercise_3.md)
+ - [Exercise 4](./Exercise_4.md)
+ - [Exercise 5](./Exercise_5.md)
 
 
 # Solutions

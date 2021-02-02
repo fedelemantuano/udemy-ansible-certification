@@ -34,4 +34,4 @@
 
 - Make a playbook that use [geerlingguy.haproxy](https://galaxy.ansible.com/geerlingguy/haproxy) to install and configure [HAProxy](http://www.haproxy.org/). This playbook should balance the webservers in group inventory on port 80/TCP. Remember to open port 80/TCP with your role.
 
-- Create a role that install [PostgreSQL](https://www.postgresql.org/), start and create a database. Then you should make a playbook that use this role and open PostgreSQL port (5432/TCP) on firewall (use your role).
+- Make a playbook that use [geerlingguy.postgresql](https://galaxy.ansible.com/geerlingguy/postgresql) to install and configure [PostgreSQL](https://www.postgresql.org/). Use the role firewall to open the PostgreSQL port (5432/TCP). Create a database `udemy` and a user `udemy_user` with password `udemy_password`.

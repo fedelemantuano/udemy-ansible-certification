@@ -25,7 +25,7 @@
 - Make a role that install and configure `firewalld`. The role should enable service and open a ports list. Set as default port 80/TCP.
   If you want, you can see the [linux-system-roles-firewall](https://github.com/linux-system-roles/firewall) implementation.
 
-- Make a playbook that uses the `firewalld` role and opens port 80/TCP. Then install web server Apache and adds the file `/var/www/html/index.html`.
+- Make a playbook that uses the `firewall` role and opens port 80/TCP. Then install web server Apache and adds the file `/var/www/html/index.html`.
   This file should have a line with hostname and IP address of eth1:
 
   _This is web1.ansible.loc server on ip address 192.168.33.10_
@@ -49,7 +49,7 @@
     ...
   ```
 
-  The try to connect to database from control node with the following command:
+  Then try to connect to database from control node with the following command:
 
   ```
   [vagrant@control ansible]$ psql -h database.ansible.loc -d udemy -U udemy_user

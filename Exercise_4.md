@@ -36,6 +36,6 @@
 - Use the correct command to rekey the vault file with the new password `u4emy!`.
 
 - Create a playbook that use the vault password and create the users.
-  The password should be converted into password hash with `password_hash` filter passing `SHA512` function.
+  The password of users should be converted into password hash with `password_hash` filter passing `SHA512` function.
   When run the playbook use a file to decrypt the vault, without to prompt password.
   Run the playbook on control node.

@@ -33,4 +33,4 @@ All practical examples used here do not reflect the training programs provided b
 
 # Solutions
 
-All solutions are in Udemy Course.
+All solutions are in [Udemy Course](https://www.udemy.com/course/preparazione-red-hat-certified-ansible-exam-ex407/).
